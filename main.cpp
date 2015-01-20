@@ -16,13 +16,16 @@ int main() {
 
 	vector<int> iVec(vec);
 	InsertionSort(iVec, 0, size - 1);
+	cout << "InsertionSort Vector: ";
 	PrintVector(iVec);
 
 	vector<int> mVec(vec);
 	MergeSort(mVec, 0, size - 1);
+	cout << "MergeSort Vector: ";
 	PrintVector(mVec);
 
 	vector<int> qVec(vec);
 	QuickSort(qVec, 0, size - 1);
+	cout << "QuickSort Vector: ";
 	PrintVector(qVec);
 }
