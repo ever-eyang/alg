@@ -1,3 +1,4 @@
+#include <climits>
 #include "MergeSort.h"
 
 using namespace std;

@@ -4,6 +4,7 @@
 #include "QuickSort.h"
 #include "InsertionSort.h"
 #include "MergeSort.h"
+#include "BubbleSort.h"
 
 using namespace std;
 
@@ -18,6 +19,11 @@ int main() {
 	InsertionSort(iVec, 0, size - 1);
 	cout << "InsertionSort Vector: ";
 	PrintVector(iVec);
+
+	vector<int> bVec(vec);
+	BubbleSort(bVec, 0, size - 1);
+	cout << "BubbleSort Vector: ";
+	PrintVector(bVec);
 
 	vector<int> mVec(vec);
 	MergeSort(mVec, 0, size - 1);

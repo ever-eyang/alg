@@ -2,7 +2,7 @@
 CC = g++
 CFLAGS = -Wall 
 EXEC = sortingCpp
-SRCS = main.cpp InsertionSort.cpp QuickSort.cpp MergeSort.cpp
+SRCS = main.cpp InsertionSort.cpp QuickSort.cpp MergeSort.cpp BubbleSort.cpp
 
 all: $(EXEC)
 
