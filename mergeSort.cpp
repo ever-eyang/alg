@@ -1,11 +1,6 @@
-#include <iostream>
-#include <climits>
-#include <vector>
+#include "MergeSort.h"
 
 using namespace std;
-
-void merge(vector<int>&, int, int, int);
-void mergesort(vector<int>&, int, int);
 
 void merge(vector<int>& arr, int p, int q, int r) {
 	int cLeft = q - p + 1;
@@ -41,26 +36,14 @@ void merge(vector<int>& arr, int p, int q, int r) {
 
 }
 
-void mergesort(vector<int>& arr, int p, int r) {
+void MergeSort(vector<int>& arr, int p, int r) {
 	//check base case condition
 	if (p <  r) {
 		//splice in middle
 		int q = (p + r)/2;
-		mergesort(arr, p, q);
-		mergesort(arr, q+1, r);
+		MergeSort(arr, p, q);
+		MergeSort(arr, q+1, r);
 		merge(arr,p, q, r);
 	}
 }
 
-int main() {
-	static const int arr[] = {5, 2, 4, 7, 1, 3, 2, 6};
-
-	vector<int> vec(arr, arr + sizeof(arr) / sizeof(arr[0]));
-
-	mergesort(vec, 0, vec.size() - 1);
-
-	for (vector<int>::const_iterator it = vec.begin(); it != vec.end(); ++it) {
-		cout << *it << ' ';
-	}
-	cout << endl;
-}
