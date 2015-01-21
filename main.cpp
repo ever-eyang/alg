@@ -5,6 +5,7 @@
 #include "InsertionSort.h"
 #include "MergeSort.h"
 #include "BubbleSort.h"
+#include "HeapSort.h"
 
 using namespace std;
 
@@ -34,4 +35,9 @@ int main() {
 	QuickSort(qVec, 0, size - 1);
 	cout << "QuickSort Vector: ";
 	PrintVector(qVec);
+
+	vector<int> hVec(vec);
+	HeapSort(hVec);
+	cout << "HeapSort Vector: ";
+	PrintVector(hVec);
 }
