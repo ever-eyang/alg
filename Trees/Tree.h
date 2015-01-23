@@ -1,11 +1,20 @@
+#include <vector>
 
-class Node {
+class bNode {
 	public:
 		int key;
-		Node* parent;
-		Node* left;
-		Node* right;
-		Node(int key);
+		bNode* parent;
+		bNode* left;
+		bNode* right;
+		bNode(int key);
 };
 
-void InOrderWalk(Node*);
+void InOrderWalk(bNode*);
+
+class nNode {
+	public:
+		int key;
+		nNode* parent;
+		std::vector<nNode*> children;
+		nNode(int key);
+};
