@@ -37,3 +37,13 @@ void buildMaxHeap(vector<int>& vec) {
 		maxHeapify(vec, i, size);
 	}
 }
+int heapMaximum(std::vector<int>& vec) {
+	return vec[0];
+}
+int popMax(std::vector<int>& vec, int hSize) {
+	int max = vec[0];
+	vec[0] = vec[hSize - 1];
+	hSize--;
+	maxHeapify(vec, 0, hSize);
+	return max;
+}
