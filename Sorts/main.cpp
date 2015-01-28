@@ -4,6 +4,7 @@
 #include "QuickSort.h"
 #include "InsertionSort.h"
 #include "MergeSort.h"
+#include "MergeCyclic.h"
 #include "BubbleSort.h"
 #include "HeapSort.h"
 
@@ -30,6 +31,11 @@ int main() {
 	MergeSort(mVec, 0, size - 1);
 	cout << "MergeSort Vector: ";
 	PrintVector(mVec);
+
+	vector<int> mcVec(vec);
+	MergeSortA(mcVec, 0, size - 1);
+	cout << "MergeSort Cyclic Vector: ";
+	PrintVector(mcVec);
 
 	vector<int> qVec(vec);
 	QuickSort(qVec, 0, size - 1);
